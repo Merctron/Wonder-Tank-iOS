@@ -31,9 +31,14 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
     var addFood = false
     var addFish = false
     
+    var posScale = CGFloat(-1.0)
+    var negScale = CGFloat(1.0)
+    
+    var fishShape: SKShapeNode!
+    
     override func didMoveToView(view: SKView) {
         backgroundColor = SKColor.whiteColor()
-        self.physicsWorld.gravity = CGVectorMake(0.0, -0.2)
+        self.physicsWorld.gravity = CGVectorMake(0.0, 0.0)
         self.physicsWorld.contactDelegate = self
         
         let bottomBoundSprite = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: self.size.width*2, height: 10))
@@ -91,6 +96,7 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
                 spriteObject.physicsBody?.contactTestBitMask = PhysicsCategory.Food
                 spriteObject.physicsBody?.collisionBitMask = PhysicsCategory.Bound
                 spriteObject.position = location
+                spriteObject.xScale = posScale
                 self.fishes.append(spriteObject)
                 
                 self.addChild(spriteObject)
@@ -142,6 +148,7 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
                     
                     if randVal(min: 0.0, max: 10.0) > 5.0 {
                         fishObj.movementRateX = -fishObj.movementRateX
+                        fishObj.xScale = fishObj.xScale * -1
                     }
                     else {
                         
@@ -159,9 +166,11 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
             
             if fishObj.position.x >= self.size.width {
                 fishObj.movementRateX = CGFloat(-1.0)
+                fishObj.xScale = negScale
             }
             else if fishObj.position.x <= 0 {
                 fishObj.movementRateX = CGFloat(1.0)
+                fishObj.xScale = posScale
             }
             
             if fishObj.position.y >= self.size.height {
@@ -181,9 +190,11 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
         for fishObj: fish in self.fishes {
             if fishObj.position.x > fdlocation.x {
                 fishObj.movementRateX = CGFloat(-2.0)
+                fishObj.xScale = negScale
             }
             else {
                 fishObj.movementRateX = CGFloat(2.0)
+                fishObj.xScale = posScale
             }
             
             if fishObj.position.y > fdlocation.y {

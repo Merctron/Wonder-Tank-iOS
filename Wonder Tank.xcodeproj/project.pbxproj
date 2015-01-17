@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083477971A6ADAC700A1B8CF /* SoapMoleculeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083477961A6ADAC700A1B8CF /* SoapMoleculeController.swift */; };
+		083477991A6ADBBE00A1B8CF /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083477981A6ADBBE00A1B8CF /* Molecules.swift */; };
 		0857D14C1A6A5DBF00991C0D /* FishTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0857D14B1A6A5DBF00991C0D /* FishTank.swift */; };
 		0857D14E1A6A690200991C0D /* FishTankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0857D14D1A6A690200991C0D /* FishTankController.swift */; };
 		3813E0971A6A3F22007DA5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813E0961A6A3F22007DA5B5 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083477961A6ADAC700A1B8CF /* SoapMoleculeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapMoleculeController.swift; sourceTree = "<group>"; };
+		083477981A6ADBBE00A1B8CF /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		0857D14B1A6A5DBF00991C0D /* FishTank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishTank.swift; sourceTree = "<group>"; };
 		0857D14D1A6A690200991C0D /* FishTankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishTankController.swift; sourceTree = "<group>"; };
 		3813E0911A6A3F22007DA5B5 /* Wonder Tank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wonder Tank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,8 @@
 				3813E0941A6A3F22007DA5B5 /* Supporting Files */,
 				0857D14B1A6A5DBF00991C0D /* FishTank.swift */,
 				0857D14D1A6A690200991C0D /* FishTankController.swift */,
+				083477961A6ADAC700A1B8CF /* SoapMoleculeController.swift */,
+				083477981A6ADBBE00A1B8CF /* Molecules.swift */,
 			);
 			path = "Wonder Tank";
 			sourceTree = "<group>";
@@ -228,8 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3813E0991A6A3F22007DA5B5 /* ViewController.swift in Sources */,
+				083477991A6ADBBE00A1B8CF /* Molecules.swift in Sources */,
 				0857D14C1A6A5DBF00991C0D /* FishTank.swift in Sources */,
 				3813E0971A6A3F22007DA5B5 /* AppDelegate.swift in Sources */,
+				083477971A6ADAC700A1B8CF /* SoapMoleculeController.swift in Sources */,
 				0857D14E1A6A690200991C0D /* FishTankController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
