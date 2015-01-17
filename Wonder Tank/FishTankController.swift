@@ -63,4 +63,13 @@ class FishTankController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    @IBAction func enableFood(sender: AnyObject) {
+        scene.setFoodToTrue()
+    }
+
+    @IBAction func enableFish(sender: AnyObject) {
+        scene.setFishToTrue()
+    }
+    
 }

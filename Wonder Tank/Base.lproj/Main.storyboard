@@ -287,6 +287,9 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="enableFood:" destination="xB4-Py-fOy" eventType="touchDown" id="II0-Bb-eRa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Er-Vh-jlp">
                                 <rect key="frame" x="60" y="9" width="30" height="30"/>
@@ -294,6 +297,9 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="enableFish:" destination="xB4-Py-fOy" eventType="touchDown" id="NXA-BN-3rp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.119483883" green="0.56292582349999998" blue="0.67516559099999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -308,7 +314,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8oh-7o-7cU"/>
         <segue reference="y7v-hW-JqY"/>
+        <segue reference="JrL-tR-bFq"/>
     </inferredMetricsTieBreakers>
 </document>
