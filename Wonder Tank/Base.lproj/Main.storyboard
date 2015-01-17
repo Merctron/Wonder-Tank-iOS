@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -226,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e32-c4-uN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="1020"/>
+            <point key="canvasLocation" x="145" y="1116"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K0l-Nw-FuU">
@@ -240,23 +240,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCG-WD-wyW">
-                                <rect key="frame" x="248" y="53" width="105" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCG-WD-wyW">
+                                <rect key="frame" x="248" y="123" width="105" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="OZy-pa-1Yk"/>
+                                    <constraint firstAttribute="width" constant="105" id="Un7-Qj-7il"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Fish Tank">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="xB4-Py-fOy" kind="show" id="bq9-XM-ryh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-85-aXh">
+                                <rect key="frame" x="186" y="168" width="229" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Molecular Interaction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simulations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12z-U1-2YZ">
+                                <rect key="frame" x="211" y="28" width="178" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkh-Jv-xqE">
+                                <rect key="frame" x="186" y="218" width="229" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Weather System">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-eT-EAN">
+                                <rect key="frame" x="186" y="268" width="229" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Car Crash">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOX-3O-I0b">
+                                <rect key="frame" x="186" y="318" width="229" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Flower Care">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRR-Eb-fgj">
+                                <rect key="frame" x="16" y="550" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fRc-T3-YSZ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.038764604759232157" green="0.73599273989898983" blue="0.67391469064983278" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.119483883" green="0.56292582349999998" blue="0.67516559099999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jiB-eT-EAN" firstAttribute="top" secondItem="Lkh-Jv-xqE" secondAttribute="bottom" constant="8" symbolic="YES" id="0t2-rU-YzV"/>
+                            <constraint firstItem="12z-U1-2YZ" firstAttribute="top" secondItem="i9Y-fT-wea" secondAttribute="bottom" constant="8" symbolic="YES" id="2xb-vE-K8i"/>
+                            <constraint firstItem="Lkh-Jv-xqE" firstAttribute="leading" secondItem="jiB-eT-EAN" secondAttribute="leading" id="AAk-rh-qkY"/>
+                            <constraint firstItem="uCG-WD-wyW" firstAttribute="centerX" secondItem="12z-U1-2YZ" secondAttribute="centerX" id="CF8-hZ-FX9"/>
+                            <constraint firstItem="Jrz-85-aXh" firstAttribute="leading" secondItem="Lkh-Jv-xqE" secondAttribute="leading" id="Euz-Jc-nUo"/>
+                            <constraint firstItem="HOX-3O-I0b" firstAttribute="centerX" secondItem="c1P-Jb-BDB" secondAttribute="centerX" id="KwV-RU-QBc"/>
+                            <constraint firstItem="Lkh-Jv-xqE" firstAttribute="top" secondItem="Jrz-85-aXh" secondAttribute="bottom" constant="8" symbolic="YES" id="QL7-cW-Z2E"/>
+                            <constraint firstItem="Lkh-Jv-xqE" firstAttribute="trailing" secondItem="Jrz-85-aXh" secondAttribute="trailing" id="U8Z-Y3-ScT"/>
+                            <constraint firstItem="Jrz-85-aXh" firstAttribute="top" secondItem="uCG-WD-wyW" secondAttribute="bottom" constant="13" id="ajW-zP-qUc"/>
+                            <constraint firstItem="uCG-WD-wyW" firstAttribute="top" secondItem="12z-U1-2YZ" secondAttribute="bottom" constant="53" id="bsX-cj-TIV"/>
+                            <constraint firstItem="Jrz-85-aXh" firstAttribute="centerX" secondItem="uCG-WD-wyW" secondAttribute="centerX" id="eIM-dv-asj"/>
+                            <constraint firstItem="sMH-OF-gKv" firstAttribute="top" secondItem="XRR-Eb-fgj" secondAttribute="bottom" constant="8" symbolic="YES" id="faM-7f-PZf"/>
+                            <constraint firstItem="jiB-eT-EAN" firstAttribute="leading" secondItem="HOX-3O-I0b" secondAttribute="leading" id="m6c-TC-2eP"/>
+                            <constraint firstItem="Lkh-Jv-xqE" firstAttribute="trailing" secondItem="jiB-eT-EAN" secondAttribute="trailing" id="ngK-Ex-ftn"/>
+                            <constraint firstItem="HOX-3O-I0b" firstAttribute="trailing" secondItem="jiB-eT-EAN" secondAttribute="trailing" id="wBE-QZ-xCn"/>
+                            <constraint firstItem="HOX-3O-I0b" firstAttribute="top" secondItem="jiB-eT-EAN" secondAttribute="bottom" constant="8" symbolic="YES" id="yQO-hR-uPL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP5-3n-zku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="-669"/>
+            <point key="canvasLocation" x="844" y="-621"/>
         </scene>
         <!--Fish Tank Controller-->
         <scene sceneID="T5s-ip-j23">
@@ -310,11 +382,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZ0-S2-GoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="260"/>
+            <point key="canvasLocation" x="844" y="134"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y7v-hW-JqY"/>
         <segue reference="JrL-tR-bFq"/>
+        <segue reference="fRc-T3-YSZ"/>
     </inferredMetricsTieBreakers>
 </document>
