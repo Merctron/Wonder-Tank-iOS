@@ -164,19 +164,19 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
-            if fishObj.position.x >= self.size.width {
+            if fishObj.position.x >= self.size.width - 10 {
                 fishObj.movementRateX = CGFloat(-1.0)
                 fishObj.xScale = negScale
             }
-            else if fishObj.position.x <= 0 {
+            else if fishObj.position.x <= 0 + 10{
                 fishObj.movementRateX = CGFloat(1.0)
                 fishObj.xScale = posScale
             }
             
-            if fishObj.position.y >= self.size.height {
+            if fishObj.position.y >= self.size.height - 10{
                 fishObj.movementRateY = CGFloat(-0.9)
             }
-            else if fishObj.position.y <= 0 {
+            else if fishObj.position.y <= 0 + 10{
                 fishObj.movementRateY = CGFloat(1.8)
             }
             
