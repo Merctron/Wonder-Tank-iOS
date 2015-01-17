@@ -169,19 +169,19 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
                 }
             }
             
-            if fishObj.position.x >= self.size.width - 10 {
+            if fishObj.position.x >= self.size.width - 16 {
                 fishObj.movementRateX = CGFloat(-1.0)
                 fishObj.xScale = negScale
             }
-            else if fishObj.position.x <= 0 + 10{
+            else if fishObj.position.x <= 0 + 16{
                 fishObj.movementRateX = CGFloat(1.0)
                 fishObj.xScale = posScale
             }
             
-            if fishObj.position.y >= self.size.height - 10{
+            if fishObj.position.y >= self.size.height - 16{
                 fishObj.movementRateY = CGFloat(-0.9)
             }
-            else if fishObj.position.y <= 0 + 10{
+            else if fishObj.position.y <= 0 + 16{
                 fishObj.movementRateY = CGFloat(1.8)
             }
             
@@ -193,21 +193,17 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
     
     func swimToFood(#fdlocation: CGPoint) {
         for fishObj: fish in self.fishes {
+            
             if fishObj.position.x > fdlocation.x {
-                fishObj.movementRateX = CGFloat(-2.0)
                 fishObj.xScale = negScale
             }
             else {
-                fishObj.movementRateX = CGFloat(2.0)
                 fishObj.xScale = posScale
             }
-            
-            if fishObj.position.y > fdlocation.y {
-                fishObj.movementRateY = CGFloat(-2.0)
-            }
-            else {
-                fishObj.movementRateY = CGFloat(2.0)
-            }
+
+            let actualDuration = randVal(min: CGFloat(4.0), max: CGFloat(8.0))
+            let actionMove = SKAction.moveTo(fdlocation, duration: NSTimeInterval(actualDuration))
+            fishObj.runAction(actionMove)
         }
     }
     
