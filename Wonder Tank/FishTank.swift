@@ -49,7 +49,8 @@ class FishTank: SKScene {
             
             if addFood == true {
                 let location = touch.locationInNode(self)
-                let spriteObject = food(color: UIColor.brownColor(), size: CGSize(width: 10, height: 10))
+
+                let spriteObject = food(texture: SKTexture(imageNamed: "fishfood.png"))
                 
                 spriteObject.position = location
                 spriteObject.physicsBody = SKPhysicsBody(circleOfRadius: spriteObject.size.height / 2.75)
@@ -60,7 +61,9 @@ class FishTank: SKScene {
             }
             else if addFish == true {
                 let location = touch.locationInNode(self)
-                let spriteObject = fish(color: UIColorFromRGB(0x209624), size: CGSize(width: 100, height: 50))
+                //let spriteObject = fish(color: UIColorFromRGB(0x209624), size: CGSize(width: 100, height: 50))
+                let spriteObject = fish(texture: SKTexture(imageNamed: "fish.png"))
+                
                 spriteObject.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 100, height: 50))
                 spriteObject.physicsBody?.dynamic = true
                 spriteObject.position = location

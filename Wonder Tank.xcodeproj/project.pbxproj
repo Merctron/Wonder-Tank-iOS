@@ -15,6 +15,8 @@
 		3813E09E1A6A3F22007DA5B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3813E09D1A6A3F22007DA5B5 /* Images.xcassets */; };
 		3813E0A11A6A3F22007DA5B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3813E09F1A6A3F22007DA5B5 /* LaunchScreen.xib */; };
 		3813E0AD1A6A3F22007DA5B5 /* Wonder_TankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813E0AC1A6A3F22007DA5B5 /* Wonder_TankTests.swift */; };
+		3816B1EE1A6AB76100690D92 /* fishfood.png in Resources */ = {isa = PBXBuildFile; fileRef = 3816B1ED1A6AB76100690D92 /* fishfood.png */; };
+		3816B1F01A6AB76F00690D92 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 3816B1EF1A6AB76F00690D92 /* fish.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		3813E0A61A6A3F22007DA5B5 /* Wonder TankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wonder TankTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3813E0AB1A6A3F22007DA5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3813E0AC1A6A3F22007DA5B5 /* Wonder_TankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wonder_TankTests.swift; sourceTree = "<group>"; };
+		3816B1ED1A6AB76100690D92 /* fishfood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fishfood.png; sourceTree = "<group>"; };
+		3816B1EF1A6AB76F00690D92 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		3813E0941A6A3F22007DA5B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3816B1EF1A6AB76F00690D92 /* fish.png */,
+				3816B1ED1A6AB76100690D92 /* fishfood.png */,
 				3813E0951A6A3F22007DA5B5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -200,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3813E09C1A6A3F22007DA5B5 /* Main.storyboard in Resources */,
+				3816B1F01A6AB76F00690D92 /* fish.png in Resources */,
+				3816B1EE1A6AB76100690D92 /* fishfood.png in Resources */,
 				3813E0A11A6A3F22007DA5B5 /* LaunchScreen.xib in Resources */,
 				3813E09E1A6A3F22007DA5B5 /* Images.xcassets in Resources */,
 			);
