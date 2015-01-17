@@ -9,10 +9,22 @@
 import Foundation
 import SpriteKit
 
-class FishTank: SKScene {
+struct PhysicsCategory {
+    static let None      : UInt32 = 0
+    static let All       : UInt32 = UInt32.max
+    static let Bound     : UInt32 = 0b100
+    static let Fish      : UInt32 = 0b1       // 1
+    static let Food      : UInt32 = 0b10      // 2
+}
+
+class FishTank: SKScene, SKPhysicsContactDelegate {
     
     var fishes: [fish] = []
-    var foodInTank: [food] = []
+    var foodCount = 0
+    
+    var water: SKSpriteNode!
+    var lights: SKLightNode!
+    
     var initialTime = CFTimeInterval(0)
     var simulationTime = CFTimeInterval(0)
     
@@ -22,6 +34,7 @@ class FishTank: SKScene {
     override func didMoveToView(view: SKView) {
         backgroundColor = SKColor.whiteColor()
         self.physicsWorld.gravity = CGVectorMake(0.0, -0.2)
+        self.physicsWorld.contactDelegate = self
         
         let bottomBoundSprite = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: self.size.width*2, height: 10))
         bottomBoundSprite.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.size.width*2, height: 10))
@@ -37,9 +50,14 @@ class FishTank: SKScene {
         rightBoundSprite.physicsBody?.dynamic = false
         rightBoundSprite.position = CGPoint(x: self.size.width, y: self.size.height)
         
+        water = SKSpriteNode(color: UIColor.cyanColor(), size: CGSize(width: self.size.width, height: self.size.height - 25))
+        water.position = CGPoint(x: self.size.width/2.0, y: water.size.height/2.0)
+        water.alpha = 0.5
+        
         self.addChild(bottomBoundSprite)
         self.addChild(leftBoundSprite)
         self.addChild(rightBoundSprite)
+        self.addChild(water)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -54,8 +72,11 @@ class FishTank: SKScene {
                 spriteObject.position = location
                 spriteObject.physicsBody = SKPhysicsBody(circleOfRadius: spriteObject.size.height / 2.75)
                 spriteObject.physicsBody?.dynamic = true
-                self.foodInTank.append(spriteObject)
-                
+                spriteObject.physicsBody?.categoryBitMask = PhysicsCategory.Food
+                spriteObject.physicsBody?.contactTestBitMask = PhysicsCategory.Fish
+                spriteObject.physicsBody?.collisionBitMask = PhysicsCategory.Bound
+                self.foodCount++
+                swimToFood(fdlocation: location)
                 self.addChild(spriteObject)
             }
             else if addFish == true {
@@ -63,6 +84,9 @@ class FishTank: SKScene {
                 let spriteObject = fish(color: UIColorFromRGB(0x209624), size: CGSize(width: 100, height: 50))
                 spriteObject.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 100, height: 50))
                 spriteObject.physicsBody?.dynamic = true
+                spriteObject.physicsBody?.categoryBitMask = PhysicsCategory.Fish
+                spriteObject.physicsBody?.contactTestBitMask = PhysicsCategory.Food
+                spriteObject.physicsBody?.collisionBitMask = PhysicsCategory.Bound
                 spriteObject.position = location
                 self.fishes.append(spriteObject)
                 
@@ -78,25 +102,55 @@ class FishTank: SKScene {
         
     }
     
+    func didBeginContact(contact: SKPhysicsContact) {
+        
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if secondBody.categoryBitMask == PhysicsCategory.Food {
+            fishDidCollideWithFood(secondBody.node as SKSpriteNode)
+        }
+        
+//        if ((firstBody.categoryBitMask & PhysicsCategory.Fish != 0) &&
+//            (secondBody.categoryBitMask & PhysicsCategory.Food != 0)) {
+//                fishDidCollideWithFood(secondBody.node as SKSpriteNode)
+//        }
+    }
+    
+    func fishDidCollideWithFood(foodsp:SKSpriteNode) {
+        foodsp.removeFromParent()
+        self.foodCount--
+    }
+    
     func driveBehaviour() {
         for fishObj: fish in self.fishes {
             
-            if fishObj.moved > fishObj.movementBound {
-                fishObj.moved = CGFloat(0.0)
-                
-                if randVal(min: 0.0, max: 10.0) > 5.0 {
-                    fishObj.movementRateX = -fishObj.movementRateX
-                }
-                else {
+            if foodCount == 0 {
+                if fishObj.moved > fishObj.movementBound {
+                    fishObj.moved = CGFloat(0.0)
                     
-                }
-                
-                if randVal(min: 0.0, max: 10.0) > 5.0 {
-                    fishObj.movementRateY = CGFloat(1.8)
-
-                }
-                else {
-                    fishObj.movementRateY = CGFloat(-0.8)
+                    if randVal(min: 0.0, max: 10.0) > 5.0 {
+                        fishObj.movementRateX = -fishObj.movementRateX
+                    }
+                    else {
+                        
+                    }
+                    
+                    if randVal(min: 0.0, max: 10.0) > 5.0 {
+                        fishObj.movementRateY = CGFloat(1.8)
+                        
+                    }
+                    else {
+                        fishObj.movementRateY = CGFloat(-0.8)
+                    }
                 }
             }
             
@@ -117,6 +171,24 @@ class FishTank: SKScene {
             fishObj.position.x += fishObj.movementRateX
             fishObj.position.y += fishObj.movementRateY
             fishObj.moved++
+        }
+    }
+    
+    func swimToFood(#fdlocation: CGPoint) {
+        for fishObj: fish in self.fishes {
+            if fishObj.position.x > fdlocation.x {
+                fishObj.movementRateX = CGFloat(-2.0)
+            }
+            else {
+                fishObj.movementRateX = CGFloat(2.0)
+            }
+            
+            if fishObj.position.y > fdlocation.y {
+                fishObj.movementRateY = CGFloat(-2.0)
+            }
+            else {
+                fishObj.movementRateY = CGFloat(2.0)
+            }
         }
     }
     
