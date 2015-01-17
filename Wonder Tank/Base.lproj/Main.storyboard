@@ -188,28 +188,36 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Tank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea1-TH-bo5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Tank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea1-TH-bo5">
                                 <rect key="frame" x="243" y="108" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-gc-ggV">
-                                <rect key="frame" x="279" y="255" width="1192" height="21"/>
-                                <string key="text">Created by Murtuza Kainan and Zach Perry for the educational purpose of illustrating how various scientific processes occur, through variable manipulation.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-gc-ggV">
+                                <rect key="frame" x="94" y="140" width="413" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="SFp-ol-0SB"/>
+                                </constraints>
+                                <string key="text">Wonder Tank was created by Murtuza Kainan and Zach Perry for the educational purpose of illustrating how various scientific processes occur, through variable manipulation.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.119483883" green="0.56292582349999998" blue="0.67516559099999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ea1-TH-bo5" firstAttribute="top" secondItem="Wxj-nN-skZ" secondAttribute="bottom" constant="38" id="1fy-ee-AX1"/>
+                            <constraint firstItem="ea1-TH-bo5" firstAttribute="centerX" secondItem="P4Z-e8-smu" secondAttribute="centerX" id="67Q-iB-H8h"/>
+                            <constraint firstItem="rkz-gc-ggV" firstAttribute="leading" secondItem="P4Z-e8-smu" secondAttribute="leadingMargin" constant="78" id="6xR-ci-b8T"/>
                             <constraint firstItem="Lmo-QQ-jse" firstAttribute="baseline" secondItem="G4Y-l9-RUs" secondAttribute="firstBaseline" id="J2x-bk-TxK"/>
-                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="top" secondItem="SeN-BS-O5F" secondAttribute="bottom" constant="8" symbolic="YES" id="K05-kU-axM"/>
                             <constraint firstAttribute="bottom" secondItem="Lmo-QQ-jse" secondAttribute="bottom" constant="20" symbolic="YES" id="R1R-HS-GaV"/>
-                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="centerX" secondItem="P4Z-e8-smu" secondAttribute="centerX" id="YyS-rQ-doW"/>
+                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="top" secondItem="SeN-BS-O5F" secondAttribute="bottom" constant="8" symbolic="YES" id="Uvr-06-1qR"/>
                             <constraint firstItem="G4Y-l9-RUs" firstAttribute="leading" secondItem="P4Z-e8-smu" secondAttribute="leadingMargin" id="eKs-Cz-QGH"/>
-                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="centerX" secondItem="Lmo-QQ-jse" secondAttribute="centerX" id="qRf-UC-bj3"/>
+                            <constraint firstItem="ea1-TH-bo5" firstAttribute="centerX" secondItem="rkz-gc-ggV" secondAttribute="centerX" id="i8i-g1-lga"/>
+                            <constraint firstItem="rkz-gc-ggV" firstAttribute="top" secondItem="ea1-TH-bo5" secondAttribute="bottom" constant="8" symbolic="YES" id="nWX-5A-rro"/>
+                            <constraint firstItem="rkz-gc-ggV" firstAttribute="centerX" secondItem="Lmo-QQ-jse" secondAttribute="centerX" id="rHf-fq-foH"/>
+                            <constraint firstItem="ea1-TH-bo5" firstAttribute="centerX" secondItem="Wxj-nN-skZ" secondAttribute="centerX" id="sYb-NU-MYS"/>
                             <constraint firstItem="Lmo-QQ-jse" firstAttribute="baseline" secondItem="G4Y-l9-RUs" secondAttribute="baseline" id="w7w-gq-Hx3"/>
                             <constraint firstItem="Cyk-l2-6BH" firstAttribute="top" secondItem="G4Y-l9-RUs" secondAttribute="bottom" constant="17" id="yij-QB-ktC"/>
                         </constraints>
