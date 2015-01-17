@@ -20,6 +20,7 @@ struct PhysicsCategory {
 class FishTank: SKScene, SKPhysicsContactDelegate {
     
     var fishes: [fish] = []
+    var foodInTank: [food] = []
     var foodCount = 0
     
     var water: SKSpriteNode!
@@ -59,10 +60,14 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
         water.position = CGPoint(x: self.size.width/2.0, y: water.size.height/2.0)
         water.alpha = 0.5
         
+        lights = SKLightNode()
+        lights.position = CGPoint(x: self.size.width/2, y: self.size.height)
+        
         self.addChild(bottomBoundSprite)
         self.addChild(leftBoundSprite)
         self.addChild(rightBoundSprite)
         self.addChild(water)
+        self.addChild(lights)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -246,7 +251,9 @@ class fish: SKSpriteNode {
 }
 
 class food: SKSpriteNode {
-    
+    var movementRateX = CGFloat(0.2)
+    var movementRateY = CGFloat(0.2)
+    var status = true
 }
 
 class environment {
