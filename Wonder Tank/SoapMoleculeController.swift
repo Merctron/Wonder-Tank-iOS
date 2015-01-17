@@ -14,6 +14,7 @@ class SoapMoleculeController: UIViewController {
     var masterGeoNode: SCNNode = SCNNode()
     var geometryNode1: SCNNode = SCNNode()
     var geometryNode2: SCNNode = SCNNode()
+    var geometryNode3: SCNNode = SCNNode()
     var currentAngle: Float = 0.0
     var sceneView: SCNView!
     
@@ -31,8 +32,11 @@ class SoapMoleculeController: UIViewController {
         geometryNode1.position = SCNVector3Make(0, 0, 0)
         geometryNode2 = Molecules.waterMolecule()
         geometryNode2.position = SCNVector3Make(12, 0, 0)
+        geometryNode3 = Molecules.oilParticle()
+        geometryNode3.position = SCNVector3Make(-12, 0, 0)
         masterGeoNode.addChildNode(geometryNode1)
         masterGeoNode.addChildNode(geometryNode2)
+        masterGeoNode.addChildNode(geometryNode3)
         sceneView.scene!.rootNode.addChildNode(masterGeoNode)
         
     }

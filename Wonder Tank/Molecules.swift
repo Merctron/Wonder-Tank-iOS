@@ -120,7 +120,7 @@ class Atoms {
     }
     
     class func oilMolecule() -> SCNGeometry {
-        let oilMolecule = SCNSphere(radius: 10.00)
+        let oilMolecule = SCNSphere(radius: 5.00)
         oilMolecule.firstMaterial!.diffuse.contents = UIColor.brownColor()
         oilMolecule.firstMaterial!.specular.contents = UIColor.whiteColor()
         return oilMolecule
