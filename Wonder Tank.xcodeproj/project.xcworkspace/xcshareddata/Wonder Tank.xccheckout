@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>E93F5F25-2F8E-4BA5-BA7A-87EBA435045E</string>
+=======
+	<string>A6EBC921-1189-4336-A5B7-FE7039C3AF7D</string>
+>>>>>>> 63a1e7ec84e308422f71a585ca6ee0c4cab00be8
 	<key>IDESourceControlProjectName</key>
 	<string>Wonder Tank</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
