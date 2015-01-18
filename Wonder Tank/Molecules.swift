@@ -92,12 +92,12 @@ class Molecules {
     class func sugarMolecule() -> SCNNode {
         var sugarMolecule = SCNNode()
         
-        let carbonNode1 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(-4, 0, 0))
-        let carbonNode2 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(-2, 0, 0))
-        let carbonNode3 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(0, 0, 0))
-        let carbonNode4 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(2, 0, 0))
-        let carbonNode5 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(4, 0, 0))
-        let carbonNode6 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(6, 0, 0))
+        let carbonNode1 = nodeWithAtom(Atoms.carbonAtom(), molecule: sugarMolecule, position: SCNVector3Make(-4, 0, 0))
+        let carbonNode2 = nodeWithAtom(Atoms.carbonAtom(), molecule: sugarMolecule, position: SCNVector3Make(-2, 0, 0))
+        let carbonNode3 = nodeWithAtom(Atoms.carbonAtom(), molecule: sugarMolecule, position: SCNVector3Make(0, 0, 0))
+        let carbonNode4 = nodeWithAtom(Atoms.carbonAtom(), molecule: sugarMolecule, position: SCNVector3Make(2, 0, 0))
+        let carbonNode5 = nodeWithAtom(Atoms.carbonAtom(), molecule: sugarMolecule, position: SCNVector3Make(4, 0, 0))
+        let carbonNode6 = nodeWithAtom(Atoms.carbonAtom(), molecule: sugarMolecule, position: SCNVector3Make(6, 0, 0))
         
         let hydrogenNode1 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(0, 2, 0))
         let hydrogenNode2 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(2, -2, 0))
