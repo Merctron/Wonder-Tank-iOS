@@ -119,5 +119,32 @@ class SoapMoleculeController: UIViewController {
         masterGeoNode.addChildNode(geometryNode2)
         masterGeoNode.addChildNode(geometryNode3)
     }
+    
+    
+    @IBAction func showEthanol(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.ethanolMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
+    }
+    
+    
+    @IBAction func showWater(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.waterMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
+    }
+    
+    
+    @IBAction func showMethanol(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.methaneMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
+    }
 }
 
