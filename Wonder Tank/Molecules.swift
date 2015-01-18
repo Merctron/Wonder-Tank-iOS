@@ -149,7 +149,7 @@ class Atoms {
     
     class func nitrogenAtom() -> SCNGeometry {
         let nitrogenAtom = SCNSphere(radius: 1.52)
-        nitrogenAton.firstMaterial!.diffuse.contents = UIColor.greenColor()
+        nitrogenAtom.firstMaterial!.diffuse.contents = UIColor.greenColor()
         nitrogenAtom.firstMaterial!.specular.contents = UIColor.whiteColor()
         return nitrogenAtom
     }
