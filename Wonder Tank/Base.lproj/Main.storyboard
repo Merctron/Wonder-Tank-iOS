@@ -424,15 +424,15 @@
             </objects>
             <point key="canvasLocation" x="844" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Solar System Controller-->
         <scene sceneID="JZ9-Q0-mse">
             <objects>
-                <viewController id="sKd-3g-uYp" sceneMemberID="viewController">
+                <viewController id="sKd-3g-uYp" customClass="SolarSystemController" customModule="Wonder_Tank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TCB-Ue-cXD"/>
                         <viewControllerLayoutGuide type="bottom" id="M2V-SP-4lJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hNi-6B-S8G">
+                    <view key="view" contentMode="scaleToFill" id="hNi-6B-S8G" customClass="SCNView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

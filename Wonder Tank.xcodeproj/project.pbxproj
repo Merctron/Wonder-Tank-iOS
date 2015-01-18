@@ -11,6 +11,8 @@
 		083477991A6ADBBE00A1B8CF /* Molecules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083477981A6ADBBE00A1B8CF /* Molecules.swift */; };
 		0857D14C1A6A5DBF00991C0D /* FishTank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0857D14B1A6A5DBF00991C0D /* FishTank.swift */; };
 		0857D14E1A6A690200991C0D /* FishTankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0857D14D1A6A690200991C0D /* FishTankController.swift */; };
+		08D6E1E01A6B454600D6C2F2 /* SolarSystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6E1DF1A6B454600D6C2F2 /* SolarSystemController.swift */; };
+		08D6E1E21A6B465A00D6C2F2 /* Celestials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6E1E11A6B465A00D6C2F2 /* Celestials.swift */; };
 		3813E0971A6A3F22007DA5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813E0961A6A3F22007DA5B5 /* AppDelegate.swift */; };
 		3813E0991A6A3F22007DA5B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813E0981A6A3F22007DA5B5 /* ViewController.swift */; };
 		3813E09C1A6A3F22007DA5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3813E09A1A6A3F22007DA5B5 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		083477981A6ADBBE00A1B8CF /* Molecules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Molecules.swift; sourceTree = "<group>"; };
 		0857D14B1A6A5DBF00991C0D /* FishTank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishTank.swift; sourceTree = "<group>"; };
 		0857D14D1A6A690200991C0D /* FishTankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishTankController.swift; sourceTree = "<group>"; };
+		08D6E1DF1A6B454600D6C2F2 /* SolarSystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemController.swift; sourceTree = "<group>"; };
+		08D6E1E11A6B465A00D6C2F2 /* Celestials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Celestials.swift; sourceTree = "<group>"; };
 		3813E0911A6A3F22007DA5B5 /* Wonder Tank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wonder Tank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3813E0951A6A3F22007DA5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3813E0961A6A3F22007DA5B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				0857D14D1A6A690200991C0D /* FishTankController.swift */,
 				083477961A6ADAC700A1B8CF /* SoapMoleculeController.swift */,
 				083477981A6ADBBE00A1B8CF /* Molecules.swift */,
+				08D6E1DF1A6B454600D6C2F2 /* SolarSystemController.swift */,
+				08D6E1E11A6B465A00D6C2F2 /* Celestials.swift */,
 			);
 			path = "Wonder Tank";
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 			files = (
 				3813E0991A6A3F22007DA5B5 /* ViewController.swift in Sources */,
 				083477991A6ADBBE00A1B8CF /* Molecules.swift in Sources */,
+				08D6E1E01A6B454600D6C2F2 /* SolarSystemController.swift in Sources */,
 				0857D14C1A6A5DBF00991C0D /* FishTank.swift in Sources */,
+				08D6E1E21A6B465A00D6C2F2 /* Celestials.swift in Sources */,
 				3813E0971A6A3F22007DA5B5 /* AppDelegate.swift in Sources */,
 				083477971A6ADAC700A1B8CF /* SoapMoleculeController.swift in Sources */,
 				0857D14E1A6A690200991C0D /* FishTankController.swift in Sources */,
