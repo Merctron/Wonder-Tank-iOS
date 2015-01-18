@@ -339,15 +339,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
-                                <rect key="frame" x="16" y="18" width="56" height="30"/>
-                                <state key="normal" title="Activate">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ActivateMolecules:" destination="ugO-8p-qXm" eventType="touchDown" id="EEp-yu-z8U"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-1t-QGa">
                                 <rect key="frame" x="16" y="562" width="46" height="30"/>
                                 <constraints>
@@ -363,13 +354,62 @@
                                     <segue destination="70Z-g9-NwP" kind="show" id="NnW-4L-bza"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
+                                <rect key="frame" x="16" y="18" width="56" height="30"/>
+                                <state key="normal" title="Activate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ActivateMolecules:" destination="ugO-8p-qXm" eventType="touchDown" id="EEp-yu-z8U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGj-wT-fpT">
+                                <rect key="frame" x="538" y="164" width="36" height="30"/>
+                                <state key="normal" title="Soap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmy-Ed-j58">
+                                <rect key="frame" x="543" y="50" width="31" height="30"/>
+                                <state key="normal" title="Acid">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-zX-0A3">
+                                <rect key="frame" x="533" y="88" width="41" height="30"/>
+                                <state key="normal" title="Sugar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I01-a7-kGE">
+                                <rect key="frame" x="544" y="126" width="30" height="30"/>
+                                <state key="normal" title="Salt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVA-HP-Qrc">
+                                <rect key="frame" x="509" y="18" width="65" height="30"/>
+                                <state key="normal" title="Ammonia">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hYH-zX-0A3" firstAttribute="top" secondItem="rmy-Ed-j58" secondAttribute="bottom" constant="8" symbolic="YES" id="594-HM-H0I"/>
+                            <constraint firstItem="rmy-Ed-j58" firstAttribute="trailing" secondItem="hVA-HP-Qrc" secondAttribute="trailing" id="9Ll-wr-mdv"/>
+                            <constraint firstItem="I01-a7-kGE" firstAttribute="top" secondItem="hYH-zX-0A3" secondAttribute="bottom" constant="8" symbolic="YES" id="Fwu-Mj-2Lp"/>
+                            <constraint firstItem="iGj-wT-fpT" firstAttribute="trailing" secondItem="I01-a7-kGE" secondAttribute="trailing" id="LbH-EM-els"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="Lcv-NR-1Uc"/>
+                            <constraint firstItem="hYH-zX-0A3" firstAttribute="trailing" secondItem="rmy-Ed-j58" secondAttribute="trailing" id="OwN-yo-BVf"/>
+                            <constraint firstItem="iGj-wT-fpT" firstAttribute="top" secondItem="I01-a7-kGE" secondAttribute="bottom" constant="8" symbolic="YES" id="SvI-fS-NJ3"/>
+                            <constraint firstItem="rmy-Ed-j58" firstAttribute="top" secondItem="hVA-HP-Qrc" secondAttribute="bottom" constant="2" id="TS3-fi-vBc"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="wH4-1t-QGa" secondAttribute="leading" id="ar8-R5-UsL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hVA-HP-Qrc" secondAttribute="trailing" constant="10" id="fhE-in-l5y"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" constant="18" id="g5T-YQ-Mcr"/>
+                            <constraint firstItem="hYH-zX-0A3" firstAttribute="trailing" secondItem="I01-a7-kGE" secondAttribute="trailing" id="jpN-H3-QgI"/>
                             <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="pvq-yl-daO"/>
+                            <constraint firstItem="hVA-HP-Qrc" firstAttribute="baseline" secondItem="heE-CX-oWR" secondAttribute="baseline" id="tiD-LP-qXS"/>
                         </constraints>
                     </view>
                 </viewController>
