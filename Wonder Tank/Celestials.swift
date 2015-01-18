@@ -12,7 +12,7 @@ import SceneKit
 class Celestials {
     class func mercury() -> SCNGeometry {
         let mercury = SCNSphere(radius: 0.2)
-        mercury.firstMaterial!.diffuse.contents = UIColor.yellowColor()
+        mercury.firstMaterial!.diffuse.contents = UIColor.orangeColor()
         mercury.firstMaterial!.specular.contents = UIColor.whiteColor()
         return mercury
     }

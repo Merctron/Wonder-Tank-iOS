@@ -47,15 +47,16 @@ class SolarSystemController: UIViewController {
         masterGeoNode = SCNNode(geometry: Celestials.sun())
         
         
-        geometryNode1.position = SCNVector3Make(7, 0, 0)
-        geometryNode2.position = SCNVector3Make(-9, 0, -9)
-        geometryNode3.position = SCNVector3Make(11, 0, 11)
-        geometryNode4.position = SCNVector3Make(-13, 0, 0)
-        geometryNode5.position = SCNVector3Make(15, 0, 0)
-        geometryNode6.position = SCNVector3Make(17, 0, -17)
-        geometryNode7.position = SCNVector3Make(-19, 0, 0)
-        geometryNode8.position = SCNVector3Make(21, 0, 0)
-        geometryNode9.position = SCNVector3Make(-21, 0, 2)
+        geometryNode1.position = SCNVector3Make(0, 0, 6)
+        geometryNode2.position = SCNVector3Make(7, 0, 0)
+        geometryNode3.position = SCNVector3Make(-8.5, 0, -8)
+        geometryNode4.position = SCNVector3Make(8, 0, -4.5)
+        //asteroid belt possibly?
+        geometryNode5.position = SCNVector3Make(-11, 0, 0)
+        geometryNode6.position = SCNVector3Make(12, 0, 8)
+        geometryNode7.position = SCNVector3Make(13, 0, -11)
+        geometryNode8.position = SCNVector3Make(-12, 0, -14)
+        geometryNode9.position = SCNVector3Make(-15, 0, 7)
         
         masterGeoNode.addChildNode(geometryNode1)
         masterGeoNode.addChildNode(geometryNode2)
