@@ -339,6 +339,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
+                                <rect key="frame" x="16" y="9" width="56" height="30"/>
+                                <state key="normal" title="Activate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ActivateMolecules:" destination="ugO-8p-qXm" eventType="touchDown" id="EEp-yu-z8U"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-1t-QGa">
                                 <rect key="frame" x="16" y="562" width="46" height="30"/>
                                 <constraints>
@@ -354,21 +363,13 @@
                                     <segue destination="70Z-g9-NwP" kind="show" id="NnW-4L-bza"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
-                                <rect key="frame" x="16" y="0.0" width="130" height="30"/>
-                                <state key="normal" title="Activate Molecules">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ActivateMolecules:" destination="ugO-8p-qXm" eventType="touchDown" id="EEp-yu-z8U"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="24s-P9-RK1"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" id="Eeu-Cm-rzR"/>
                             <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="XFy-0H-0l1"/>
+                            <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="avH-ZJ-Rvo" secondAttribute="bottom" constant="-11" id="krw-4g-1XP"/>
                         </constraints>
                     </view>
                 </viewController>
