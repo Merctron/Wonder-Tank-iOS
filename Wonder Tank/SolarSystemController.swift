@@ -41,16 +41,17 @@ class SolarSystemController: UIViewController {
         geometryNode6 = SCNNode(geometry: Celestials.saturn())
         geometryNode7 = SCNNode(geometry: Celestials.uranus())
         geometryNode8 = SCNNode(geometry: Celestials.neptune())
+        masterGeoNode = SCNNode(geometry: Celestials.sun())
         
         
-        geometryNode1.position = SCNVector3Make(1, 0, 0)
-        geometryNode2.position = SCNVector3Make(-2, 0, 0)
-        geometryNode3.position = SCNVector3Make(3, 0, 3)
-        geometryNode4.position = SCNVector3Make(-4, 0, 0)
-        geometryNode5.position = SCNVector3Make(5, 0, 0)
-        geometryNode6.position = SCNVector3Make(6, 0, 0)
-        geometryNode7.position = SCNVector3Make(-7, 0, 0)
-        geometryNode8.position = SCNVector3Make(9, 0, 0)
+        geometryNode1.position = SCNVector3Make(2, 0, 0)
+        geometryNode2.position = SCNVector3Make(-4, 0, 0)
+        geometryNode3.position = SCNVector3Make(6, 0, 6)
+        geometryNode4.position = SCNVector3Make(-8, 0, 0)
+        geometryNode5.position = SCNVector3Make(10, 0, 0)
+        geometryNode6.position = SCNVector3Make(12, 0, -12)
+        geometryNode7.position = SCNVector3Make(-14, 0, 0)
+        geometryNode8.position = SCNVector3Make(16, 0, 0)
         
         masterGeoNode.addChildNode(geometryNode1)
         masterGeoNode.addChildNode(geometryNode2)
@@ -61,16 +62,22 @@ class SolarSystemController: UIViewController {
         masterGeoNode.addChildNode(geometryNode7)
         masterGeoNode.addChildNode(geometryNode8)
         sceneView.scene!.rootNode.addChildNode(masterGeoNode)
-    
+        sceneView.backgroundColor = UIColor.blackColor()
     }
     
     func sceneSetup() {
         let scene = SCNScene()
         
+        let ambientLightNode = SCNNode()
+        ambientLightNode.light = SCNLight()
+        ambientLightNode.light!.type = SCNLightTypeAmbient
+        ambientLightNode.light!.color = UIColor(white: 0.67, alpha: 1.0)
+        scene.rootNode.addChildNode(ambientLightNode)
+        
         let omniLightNode = SCNNode()
         omniLightNode.light = SCNLight()
         omniLightNode.light!.type = SCNLightTypeOmni
-        omniLightNode.light!.color = UIColor(white: 0.75, alpha: 1.0)
+        omniLightNode.light!.color = UIColor.yellowColor()
         omniLightNode.position = SCNVector3Make(0, 0, 0)
         scene.rootNode.addChildNode(omniLightNode)
         
@@ -90,7 +97,7 @@ class SolarSystemController: UIViewController {
         var newAngle = (Float)(translation.x)*(Float)(M_PI)/180.0
         newAngle += currentAngle
         
-        masterGeoNode.transform = SCNMatrix4MakeRotation(newAngle, 0, 1, 0)
+        masterGeoNode.transform = SCNMatrix4MakeRotation(newAngle, 0, 1, 1)
         
         if(sender.state == UIGestureRecognizerState.Ended) {
             currentAngle = newAngle

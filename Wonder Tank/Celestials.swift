@@ -68,7 +68,7 @@ class Celestials {
     
     class func sun() -> SCNGeometry {
         let sun = SCNSphere(radius: 5.00)
-        sun.firstMaterial!.diffuse.contents = UIColor.brownColor()
+        sun.firstMaterial!.diffuse.contents = UIColor.yellowColor()
         sun.firstMaterial!.specular.contents = UIColor.whiteColor()
         return sun
     }
