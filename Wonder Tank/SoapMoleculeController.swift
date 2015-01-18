@@ -82,6 +82,8 @@ class SoapMoleculeController: UIViewController {
         geometryNode1.removeFromParentNode()
         geometryNode2.removeFromParentNode()
         geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.acidMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
     }
     
     

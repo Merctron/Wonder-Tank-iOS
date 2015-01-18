@@ -134,10 +134,6 @@ class Molecules {
         let oxygenNode2 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(-1, 0, 0))
         let oxygenNode3 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, +1, 0))
         let oxygenNode4 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, -1, 0))
-        
-        
-        
-        
         return acidMolecule
     }
     
