@@ -125,15 +125,16 @@ class Molecules {
     class func acidMolecule() -> SCNNode {
         var acidMolecule = SCNNode()
         
-        //let hydrogenNode1 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, 2, 0))
-        //let hydrogenNode2 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: acidMolecule, position: SCNVector3Make(2, -2, 0))
+        let hydrogenNode1 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: acidMolecule, position: SCNVector3Make(+5, 0, 0))
+        let hydrogenNode2 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: acidMolecule, position: SCNVector3Make(-5, 0, 0))
         
         let sulfurMolecule1 = nodeWithAtom(Atoms.sulfurAtom(), molecule: acidMolecule, position: SCNVector3Make(0, 0, 0))
         
-        let oxygenNode1 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(+1, 0, 0))
-        let oxygenNode2 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(-1, 0, 0))
-        let oxygenNode3 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, +1, 0))
-        let oxygenNode4 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, -1, 0))
+        let oxygenNode1 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(+3, 0, 0))
+        let oxygenNode2 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(-3, 0, 0))
+        let oxygenNode3 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, +3, 0))
+        let oxygenNode4 = nodeWithAtom(Atoms.oxygenAtom(), molecule: acidMolecule, position: SCNVector3Make(0, -3, 0))
+        
         return acidMolecule
     }
     
