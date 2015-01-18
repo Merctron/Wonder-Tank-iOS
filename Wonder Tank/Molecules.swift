@@ -73,6 +73,55 @@ class Molecules {
         return waterMolecule
     }
     
+    class func ammoniaMolecule() -> SCNNode {
+        var ammoniaMolecule = SCNNode()
+        let nitrogenNode1 = nodeWithAtom(Atoms.nitrogenAtom(), molecule: ammoniaMolecule, position: SCNVector3Make(0, 0, 0))
+        let hydrogenNode1 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: ammoniaMolecule, position: SCNVector3Make(+2, 0, 1))
+        let hydrogenNode2 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: ammoniaMolecule, position: SCNVector3Make(-2, 0, 1))
+        let hydrogenNode3 = nodeWithAtom(Atoms.hydrogenAtom(), molecule: ammoniaMolecule, position: SCNVector3Make(0, 0, -2))
+        return ammoniaMolecule
+    }
+    
+    class func saltMolecule() -> SCNNode {
+        var saltMolecule = SCNNode()
+        let sodiumNode1 = nodeWithAtom(Atoms.sodiumAtom(), molecule: saltMolecule, position: SCNVector3Make(1.5, 0, 0))
+        let chlorineNode1 = nodeWithAtom(Atoms.chlorineAtom(), molecule: saltMolecule, position: SCNVector3Make(-1.5, 0, 0))
+        return saltMolecule
+    }
+    
+    class func sugarMolecule() -> SCNNode {
+        var sugarMolecule = SCNNode()
+        
+        let carbonNode1 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(-4, 0, 0))
+        let carbonNode2 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(-2, 0, 0))
+        let carbonNode3 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(0, 0, 0))
+        let carbonNode4 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(2, 0, 0))
+        let carbonNode5 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(4, 0, 0))
+        let carbonNode6 = nodeWithAtom(Atoms.sodiumAtom(), molecule: sugarMolecule, position: SCNVector3Make(6, 0, 0))
+        
+        let hydrogenNode1 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(0, 2, 0))
+        let hydrogenNode2 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(2, -2, 0))
+        let hydrogenNode3 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-2, -2, 0))
+        let hydrogenNode4 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-4, 2, 0))
+        let hydrogenNode5 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-4, 0, 2))
+        let hydrogenNode6 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(4, 2, 0))
+        let hydrogenNode7 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(6, -2, 0))
+        let hydrogenNode8 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-1.5, 0, 0))
+        let hydrogenNode9 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-1.5, 0, 0))
+        let hydrogenNode10 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-1.5, 0, 0))
+        let hydrogenNode11 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-1.5, 0, 0))
+        let hydrogenNode12 = nodeWithAtom(Atoms.chlorineAtom(), molecule: sugarMolecule, position: SCNVector3Make(-1.5, 0, 0))
+        
+        let oxygenNode1 = nodeWithAtom(Atoms.oxygenAtom(), molecule: sugarMolecule, position: SCNVector3Make(-4, 2, 2))
+        let oxygenNode2 = nodeWithAtom(Atoms.oxygenAtom(), molecule: sugarMolecule, position: SCNVector3Make(-2, -2, -2))
+        let oxygenNode3 = nodeWithAtom(Atoms.oxygenAtom(), molecule: sugarMolecule, position: SCNVector3Make(0, 2, -2))
+        let oxygenNode4 = nodeWithAtom(Atoms.oxygenAtom(), molecule: sugarMolecule, position: SCNVector3Make(2, 2, 2))
+        let oxygenNode5 = nodeWithAtom(Atoms.oxygenAtom(), molecule: sugarMolecule, position: SCNVector3Make(4, -2, -2))
+        let oxygenNode6 = nodeWithAtom(Atoms.oxygenAtom(), molecule: sugarMolecule, position: SCNVector3Make(6, 2, 2))
+        
+        return sugarMolecule
+    }
+    
     class func oilParticle() -> SCNNode {
         var oilParticle = SCNNode()
         let oilNode = nodeWithAtom(Atoms.oilMolecule(), molecule: oilParticle, position: SCNVector3Make(0, 0, 0))

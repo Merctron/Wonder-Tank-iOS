@@ -69,5 +69,53 @@ class SoapMoleculeController: UIViewController {
     @IBAction func ActivateMolecules(sender: AnyObject) {
         driveBehaviour()
     }
+    
+    @IBAction func showAmmonia(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.ammoniaMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
+    }
+    
+    @IBAction func showAcids(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+    }
+    
+    
+    @IBAction func showSugar(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.sugarMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
+    }
+    
+    @IBAction func showSalt(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        geometryNode1 = Molecules.saltMolecule()
+        masterGeoNode.addChildNode(geometryNode1)
+    }
+    
+    @IBAction func showSoap(sender: AnyObject) {
+        geometryNode1.removeFromParentNode()
+        geometryNode2.removeFromParentNode()
+        geometryNode3.removeFromParentNode()
+        
+        
+        geometryNode1 = Molecules.longChainHydroCarbon()
+        geometryNode1.position = SCNVector3Make(0, 0, 0)
+        geometryNode2 = Molecules.waterMolecule()
+        geometryNode2.position = SCNVector3Make(12, 0, 0)
+        geometryNode3 = Molecules.oilParticle()
+        geometryNode3.position = SCNVector3Make(-12, 0, 0)
+        masterGeoNode.addChildNode(geometryNode1)
+        masterGeoNode.addChildNode(geometryNode2)
+        masterGeoNode.addChildNode(geometryNode3)
+    }
 }
 
