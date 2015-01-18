@@ -249,18 +249,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-85-aXh">
-                                <rect key="frame" x="212" y="279" width="176" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Soap Molecules">
-                                    <color key="titleColor" red="0.16078431372549018" green="1" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ugO-8p-qXm" kind="show" id="c45-5D-jjS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Simulations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12z-U1-2YZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Simulations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12z-U1-2YZ">
                                 <rect key="frame" x="211" y="28" width="178" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.16078431369999999" green="1" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,7 +267,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI3-Hi-gwY">
-                                <rect key="frame" x="227" y="329" width="146" height="42"/>
+                                <rect key="frame" x="227" y="377" width="146" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Solar System">
                                     <color key="titleColor" red="0.16078431369999999" green="1" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,24 +285,27 @@
                                     <segue destination="xB4-Py-fOy" kind="show" id="bq9-XM-ryh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVZ-j3-Fi3">
-                                <rect key="frame" x="218" y="429" width="165" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-85-aXh">
+                                <rect key="frame" x="212" y="265" width="176" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Simple Circuits">
-                                    <color key="titleColor" red="0.16078431369999999" green="1" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Soap Molecules">
+                                    <color key="titleColor" red="0.16078431372549018" green="1" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ugO-8p-qXm" kind="show" id="c45-5D-jjS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Jrz-85-aXh" secondAttribute="centerX" id="1uu-5f-wHD"/>
                             <constraint firstItem="Jrz-85-aXh" firstAttribute="top" secondItem="uCG-WD-wyW" secondAttribute="bottom" constant="8" id="2Ra-4g-DyV"/>
-                            <constraint firstAttribute="centerX" secondItem="yVZ-j3-Fi3" secondAttribute="centerX" id="6hI-MI-xDE"/>
                             <constraint firstAttribute="centerX" secondItem="oI3-Hi-gwY" secondAttribute="centerX" id="8VD-Tz-xes"/>
                             <constraint firstItem="sMH-OF-gKv" firstAttribute="top" secondItem="XRR-Eb-fgj" secondAttribute="bottom" constant="8" symbolic="YES" id="G2S-Mi-up2"/>
-                            <constraint firstItem="yVZ-j3-Fi3" firstAttribute="top" secondItem="oI3-Hi-gwY" secondAttribute="bottom" constant="8" id="JAT-F1-8zx"/>
+                            <constraint firstItem="uCG-WD-wyW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="12z-U1-2YZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Hfq-e5-C8Y"/>
                             <constraint firstAttribute="centerX" secondItem="12z-U1-2YZ" secondAttribute="centerX" id="Nbx-z6-6x1"/>
+                            <constraint firstItem="12z-U1-2YZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="i9Y-fT-wea" secondAttribute="bottom" constant="8" symbolic="YES" id="Qry-mZ-6Zb"/>
                             <constraint firstAttribute="centerX" secondItem="uCG-WD-wyW" secondAttribute="centerX" id="Rt1-o5-nDx"/>
                             <constraint firstItem="Jrz-85-aXh" firstAttribute="top" secondItem="uCG-WD-wyW" secondAttribute="bottom" priority="999" constant="-50" id="Sc7-Ej-3G8"/>
                             <constraint firstItem="oI3-Hi-gwY" firstAttribute="top" secondItem="Jrz-85-aXh" secondAttribute="bottom" constant="8" id="VBz-js-in7"/>
