@@ -61,5 +61,13 @@ class SoapMoleculeController: UIViewController {
         sceneView.scene = scene
     }
     
+    func driveBehaviour() {
+        geometryNode1.runAction(SCNAction.moveTo(SCNVector3Make(0, 0, 0), duration: NSTimeInterval(10)))
+        geometryNode3.runAction(SCNAction.moveTo(SCNVector3Make(0, 0, 0), duration: NSTimeInterval(10)))
+    }
+    
+    @IBAction func ActivateMolecules(sender: AnyObject) {
+        driveBehaviour()
+    }
 }
 

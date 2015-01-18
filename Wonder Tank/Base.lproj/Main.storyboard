@@ -354,16 +354,27 @@
                                     <segue destination="70Z-g9-NwP" kind="show" id="NnW-4L-bza"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
+                                <rect key="frame" x="16" y="0.0" width="130" height="30"/>
+                                <state key="normal" title="Activate Molecules">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ActivateMolecules:" destination="ugO-8p-qXm" eventType="touchDown" id="EEp-yu-z8U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="24s-P9-RK1"/>
+                            <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" id="Eeu-Cm-rzR"/>
                             <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="XFy-0H-0l1"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJW-h8-XBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1565" y="-621"/>
+            <point key="canvasLocation" x="1561" y="-639"/>
         </scene>
         <!--Fish Tank Controller-->
         <scene sceneID="T5s-ip-j23">
@@ -465,7 +476,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LAg-dH-YB2"/>
+        <segue reference="NnW-4L-bza"/>
         <segue reference="fRc-T3-YSZ"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
