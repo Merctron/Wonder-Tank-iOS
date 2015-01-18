@@ -147,6 +147,13 @@ class Atoms {
         return kAtom
     }
     
+    class func nitrogenAtom() -> SCNGeometry {
+        let nitrogenAtom = SCNSphere(radius: 1.52)
+        nitrogenAton.firstMaterial!.diffuse.contents = UIColor.greenColor()
+        nitrogenAtom.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return nitrogenAtom
+    }
+    
     class func oilMolecule() -> SCNGeometry {
         let oilMolecule = SCNSphere(radius: 5.00)
         oilMolecule.firstMaterial!.diffuse.contents = UIColor.brownColor()
