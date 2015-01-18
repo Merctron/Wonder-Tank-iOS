@@ -79,4 +79,11 @@ class Celestials {
         sun.firstMaterial!.specular.contents = UIColor.whiteColor()
         return sun
     }
+    
+    class func asteroid() -> SCNGeometry {
+        let asteroid = SCNSphere(radius: 0.05)
+        asteroid.firstMaterial!.diffuse.contents = UIColor.yellowColor()
+        asteroid.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return asteroid
+    }
 }

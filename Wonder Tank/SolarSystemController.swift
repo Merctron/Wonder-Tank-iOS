@@ -43,15 +43,12 @@ class SolarSystemController: UIViewController {
         geometryNode7 = SCNNode(geometry: Celestials.uranus())
         geometryNode8 = SCNNode(geometry: Celestials.neptune())
         geometryNode9 = SCNNode(geometry: Celestials.pluto())
-        
         masterGeoNode = SCNNode(geometry: Celestials.sun())
-        
         
         geometryNode1.position = SCNVector3Make(0, 0, 6)
         geometryNode2.position = SCNVector3Make(7, 0, 0)
         geometryNode3.position = SCNVector3Make(-8.5, 0, -8)
         geometryNode4.position = SCNVector3Make(8, 0, -4.5)
-        //asteroid belt possibly?
         geometryNode5.position = SCNVector3Make(-11, 0, 0)
         geometryNode6.position = SCNVector3Make(12, 0, 8)
         geometryNode7.position = SCNVector3Make(13, 0, -11)
@@ -67,8 +64,10 @@ class SolarSystemController: UIViewController {
         masterGeoNode.addChildNode(geometryNode7)
         masterGeoNode.addChildNode(geometryNode8)
         masterGeoNode.addChildNode(geometryNode9)
+        
         sceneView.scene!.rootNode.addChildNode(masterGeoNode)
         sceneView.backgroundColor = UIColor.blackColor()
+        
     }
     
     func sceneSetup() {
@@ -88,27 +87,6 @@ class SolarSystemController: UIViewController {
         scene.rootNode.addChildNode(omniLightNode)
         
         sceneView.allowsCameraControl = true
-        
-//        let cameraNode = SCNNode()
-//        cameraNode.camera = SCNCamera()
-//        cameraNode.position = SCNVector3Make(0, 0, 25)
-//        scene.rootNode.addChildNode(cameraNode)
-        
-//        let panRecognizer = UIPanGestureRecognizer(target: self, action: "panGesture:")
-//        sceneView.addGestureRecognizer(panRecognizer)
-        
         sceneView.scene = scene
     }
-    
-//    func panGesture(sender: UIPanGestureRecognizer) {
-//        let translation = sender.translationInView(sender.view!)
-//        var newAngle = (Float)(translation.x)*(Float)(M_PI)/180.0
-//        newAngle += currentAngle
-//        
-//        masterGeoNode.transform = SCNMatrix4MakeRotation(newAngle, 0, 1, 1)
-//        
-//        if(sender.state == UIGestureRecognizerState.Ended) {
-//            currentAngle = newAngle
-//        }
-//    }
 }
