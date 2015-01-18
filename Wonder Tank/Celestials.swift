@@ -66,6 +66,13 @@ class Celestials {
         return neptune
     }
     
+    class func pluto() -> SCNGeometry {
+        let pluto = SCNSphere(radius: 0.1)
+        pluto.firstMaterial!.diffuse.contents = UIColor.cyanColor()
+        pluto.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return pluto
+    }
+    
     class func sun() -> SCNGeometry {
         let sun = SCNSphere(radius: 5.00)
         sun.firstMaterial!.diffuse.contents = UIColor.yellowColor()
