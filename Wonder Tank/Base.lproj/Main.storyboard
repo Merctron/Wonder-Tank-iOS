@@ -340,7 +340,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
-                                <rect key="frame" x="16" y="9" width="56" height="30"/>
+                                <rect key="frame" x="16" y="18" width="56" height="30"/>
                                 <state key="normal" title="Activate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -348,11 +348,11 @@
                                     <action selector="ActivateMolecules:" destination="ugO-8p-qXm" eventType="touchDown" id="EEp-yu-z8U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-1t-QGa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH4-1t-QGa">
                                 <rect key="frame" x="16" y="562" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Puq-0M-4Ae"/>
-                                    <constraint firstAttribute="width" constant="46" id="SRl-qb-J6I"/>
+                                    <constraint firstAttribute="height" constant="30" id="AzK-wt-lws"/>
+                                    <constraint firstAttribute="width" constant="46" id="Svk-OH-2A8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Exit">
@@ -366,10 +366,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="24s-P9-RK1"/>
-                            <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" id="Eeu-Cm-rzR"/>
-                            <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="XFy-0H-0l1"/>
-                            <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="avH-ZJ-Rvo" secondAttribute="bottom" constant="-11" id="krw-4g-1XP"/>
+                            <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="Lcv-NR-1Uc"/>
+                            <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="wH4-1t-QGa" secondAttribute="leading" id="ar8-R5-UsL"/>
+                            <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" constant="18" id="g5T-YQ-Mcr"/>
+                            <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="pvq-yl-daO"/>
                         </constraints>
                     </view>
                 </viewController>
