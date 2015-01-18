@@ -408,22 +408,55 @@
                                     <action selector="showAmmonia:" destination="ugO-8p-qXm" eventType="touchDown" id="xH3-Nw-cGT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-UG-zdN">
+                                <rect key="frame" x="522" y="202" width="52" height="30"/>
+                                <state key="normal" title="Ethanol">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSoap:" destination="ugO-8p-qXm" eventType="touchDown" id="uAq-IE-8Rp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVK-7Y-pfG">
+                                <rect key="frame" x="534" y="240" width="40" height="30"/>
+                                <state key="normal" title="Water">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSoap:" destination="ugO-8p-qXm" eventType="touchDown" id="RMm-yi-INq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLF-El-jOr">
+                                <rect key="frame" x="514" y="278" width="60" height="30"/>
+                                <state key="normal" title="Methane">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSoap:" destination="ugO-8p-qXm" eventType="touchDown" id="oB7-2z-Ucc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hYH-zX-0A3" firstAttribute="top" secondItem="rmy-Ed-j58" secondAttribute="bottom" constant="8" symbolic="YES" id="594-HM-H0I"/>
                             <constraint firstItem="rmy-Ed-j58" firstAttribute="trailing" secondItem="hVA-HP-Qrc" secondAttribute="trailing" id="9Ll-wr-mdv"/>
+                            <constraint firstItem="jsI-UG-zdN" firstAttribute="trailing" secondItem="iGj-wT-fpT" secondAttribute="trailing" id="BMa-8a-MUL"/>
                             <constraint firstItem="I01-a7-kGE" firstAttribute="top" secondItem="hYH-zX-0A3" secondAttribute="bottom" constant="8" symbolic="YES" id="Fwu-Mj-2Lp"/>
+                            <constraint firstItem="jsI-UG-zdN" firstAttribute="top" secondItem="iGj-wT-fpT" secondAttribute="bottom" constant="8" symbolic="YES" id="GkT-Ix-hMx"/>
                             <constraint firstItem="iGj-wT-fpT" firstAttribute="trailing" secondItem="I01-a7-kGE" secondAttribute="trailing" id="LbH-EM-els"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="Lcv-NR-1Uc"/>
+                            <constraint firstItem="eLF-El-jOr" firstAttribute="top" secondItem="QVK-7Y-pfG" secondAttribute="bottom" constant="8" symbolic="YES" id="N8t-24-xJh"/>
                             <constraint firstItem="hYH-zX-0A3" firstAttribute="trailing" secondItem="rmy-Ed-j58" secondAttribute="trailing" id="OwN-yo-BVf"/>
                             <constraint firstItem="iGj-wT-fpT" firstAttribute="top" secondItem="I01-a7-kGE" secondAttribute="bottom" constant="8" symbolic="YES" id="SvI-fS-NJ3"/>
                             <constraint firstItem="rmy-Ed-j58" firstAttribute="top" secondItem="hVA-HP-Qrc" secondAttribute="bottom" constant="2" id="TS3-fi-vBc"/>
+                            <constraint firstItem="QVK-7Y-pfG" firstAttribute="trailing" secondItem="jsI-UG-zdN" secondAttribute="trailing" id="WG6-sw-JzG"/>
+                            <constraint firstItem="QVK-7Y-pfG" firstAttribute="top" secondItem="jsI-UG-zdN" secondAttribute="bottom" constant="8" symbolic="YES" id="aA8-jv-UB2"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="wH4-1t-QGa" secondAttribute="leading" id="ar8-R5-UsL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hVA-HP-Qrc" secondAttribute="trailing" constant="10" id="fhE-in-l5y"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" constant="18" id="g5T-YQ-Mcr"/>
                             <constraint firstItem="hYH-zX-0A3" firstAttribute="trailing" secondItem="I01-a7-kGE" secondAttribute="trailing" id="jpN-H3-QgI"/>
                             <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="pvq-yl-daO"/>
+                            <constraint firstItem="eLF-El-jOr" firstAttribute="trailing" secondItem="QVK-7Y-pfG" secondAttribute="trailing" id="rpX-lC-wIB"/>
                             <constraint firstItem="hVA-HP-Qrc" firstAttribute="baseline" secondItem="heE-CX-oWR" secondAttribute="baseline" id="tiD-LP-qXS"/>
                         </constraints>
                     </view>
@@ -527,7 +560,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JrL-tR-bFq"/>
+        <segue reference="NnW-4L-bza"/>
         <segue reference="fRc-T3-YSZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
