@@ -23,6 +23,12 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
     var foodInTank: [food] = []
     var foodCount = 0
     
+    var fishTexture1: SKTexture!
+    var fishTexture2: SKTexture!
+    var fishTexture3: SKTexture!
+    var fishTexture4o1: SKTexture!
+    var fishTexture4o2: SKTexture!
+    
     var water: SKSpriteNode!
     var lights: SKLightNode!
     
@@ -41,6 +47,12 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
         backgroundColor = SKColor.whiteColor()
         self.physicsWorld.gravity = CGVectorMake(0.0, 0.0)
         self.physicsWorld.contactDelegate = self
+        
+        fishTexture1 = SKTexture(imageNamed: "fish.png")
+        fishTexture2 = SKTexture(imageNamed: "fish2.png")
+        fishTexture3 = SKTexture(imageNamed: "fish3.png")
+        fishTexture4o1 = SKTexture(imageNamed: "fish4compress.png")
+        fishTexture4o2 = SKTexture(imageNamed: "fish4expand.png")
         
         let bottomBoundSprite = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: self.size.width*2, height: 10))
         bottomBoundSprite.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.size.width*2, height: 10))
@@ -92,8 +104,23 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
             }
             else if addFish == true {
                 let location = touch.locationInNode(self)
-                //let spriteObject = fish(color: UIColorFromRGB(0x209624), size: CGSize(width: 100, height: 50))
                 let spriteObject = fish(texture: SKTexture(imageNamed: "fish.png"))
+                
+                let randVar = randVal(min: 0, max: 4)
+                
+                if randVar <= 1 {
+                    spriteObject.texture = fishTexture1
+                }
+                else if randVar <= 2 {
+                    spriteObject.texture = fishTexture2
+                }
+                else if randVar <= 3 {
+                    spriteObject.texture = fishTexture3
+                }
+                else if randVar <= 4 {
+                    spriteObject.texture = fishTexture4o2
+                }
+                
                 
                 spriteObject.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 100, height: 50))
                 spriteObject.physicsBody?.dynamic = true
@@ -132,11 +159,6 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
         if secondBody.categoryBitMask == PhysicsCategory.Food {
             fishDidCollideWithFood(secondBody.node as SKSpriteNode)
         }
-        
-//        if ((firstBody.categoryBitMask & PhysicsCategory.Fish != 0) &&
-//            (secondBody.categoryBitMask & PhysicsCategory.Food != 0)) {
-//                fishDidCollideWithFood(secondBody.node as SKSpriteNode)
-//        }
     }
     
     func fishDidCollideWithFood(foodsp:SKSpriteNode) {
@@ -147,41 +169,39 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
     func driveBehaviour() {
         for fishObj: fish in self.fishes {
             
-            if foodCount == 0 {
-                if fishObj.moved > fishObj.movementBound {
-                    fishObj.moved = CGFloat(0.0)
+            if fishObj.moved > fishObj.movementBound {
+                fishObj.moved = CGFloat(0.0)
+                
+                if randVal(min: 0.0, max: 10.0) > 5.0 {
+                    fishObj.movementRateX = -fishObj.movementRateX
+                    fishObj.xScale = fishObj.xScale * -1
+                }
+                else {
                     
-                    if randVal(min: 0.0, max: 10.0) > 5.0 {
-                        fishObj.movementRateX = -fishObj.movementRateX
-                        fishObj.xScale = fishObj.xScale * -1
-                    }
-                    else {
-                        
-                    }
+                }
+                
+                if randVal(min: 0.0, max: 10.0) > 5.0 {
+                    fishObj.movementRateY = CGFloat(1.8)
                     
-                    if randVal(min: 0.0, max: 10.0) > 5.0 {
-                        fishObj.movementRateY = CGFloat(1.8)
-                        
-                    }
-                    else {
-                        fishObj.movementRateY = CGFloat(-0.8)
-                    }
+                }
+                else {
+                    fishObj.movementRateY = CGFloat(-0.8)
                 }
             }
             
-            if fishObj.position.x >= self.size.width - 16 {
+            if fishObj.position.x >= self.size.width - 10 {
                 fishObj.movementRateX = CGFloat(-1.0)
                 fishObj.xScale = negScale
             }
-            else if fishObj.position.x <= 0 + 16{
+            else if fishObj.position.x <= 0 + 10{
                 fishObj.movementRateX = CGFloat(1.0)
                 fishObj.xScale = posScale
             }
             
-            if fishObj.position.y >= self.size.height - 16{
+            if fishObj.position.y >= self.size.height - 10{
                 fishObj.movementRateY = CGFloat(-0.9)
             }
-            else if fishObj.position.y <= 0 + 16{
+            else if fishObj.position.y <= 0 + 10{
                 fishObj.movementRateY = CGFloat(1.8)
             }
             
@@ -195,15 +215,31 @@ class FishTank: SKScene, SKPhysicsContactDelegate {
         for fishObj: fish in self.fishes {
             
             if fishObj.position.x > fdlocation.x {
+                fishObj.movementRateX = CGFloat(-2.0)
                 fishObj.xScale = negScale
             }
             else {
+                fishObj.movementRateX = CGFloat(2.0)
                 fishObj.xScale = posScale
             }
-
-            let actualDuration = randVal(min: CGFloat(4.0), max: CGFloat(8.0))
-            let actionMove = SKAction.moveTo(fdlocation, duration: NSTimeInterval(actualDuration))
-            fishObj.runAction(actionMove)
+            
+            if fishObj.position.y > fdlocation.y {
+                fishObj.movementRateY = CGFloat(-2.0)
+            }
+            else {
+                fishObj.movementRateY = CGFloat(2.0)
+            }
+        }
+    }
+    
+    func flipPufferFish() {
+        for fishObj: fish in self.fishes {
+            if fishObj.texture == fishTexture4o1 {
+                fishObj.texture = fishTexture4o2
+            }
+            else if fishObj.texture == fishTexture4o2 {
+                fishObj.texture == fishTexture4o1
+            }
         }
     }
     
