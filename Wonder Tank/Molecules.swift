@@ -119,6 +119,34 @@ class Atoms {
         return fluorineAtom
     }
     
+    class func sulfurAtom() -> SCNGeometry {
+        let sulfurAtom = SCNSphere(radius: 2.25)
+        sulfurAtom.firstMaterial!.diffuse.contents = UIColor.orangeColor()
+        sulfurAtom.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return sulfurAtom
+    }
+    
+    class func chlorineAtom() -> SCNGeometry {
+        let chlorineAtom = SCNSphere(radius: 2.18)
+        chlorineAtom.firstMaterial!.diffuse.contents = UIColor.cyanColor()
+        chlorineAtom.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return chlorineAtom
+    }
+    
+    class func sodiumAtom() -> SCNGeometry {
+        let sodiumAtom = SCNSphere(radius: 3.14)
+        sodiumAtom.firstMaterial!.diffuse.contents = UIColor.blueColor()
+        sodiumAtom.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return sodiumAtom
+    }
+    
+    class func kAtom() -> SCNGeometry {
+        let kAtom = SCNSphere(radius: 4.87)
+        kAtom.firstMaterial!.diffuse.contents = UIColor.grayColor()
+        kAtom.firstMaterial!.specular.contents = UIColor.whiteColor()
+        return kAtom
+    }
+    
     class func oilMolecule() -> SCNGeometry {
         let oilMolecule = SCNSphere(radius: 5.00)
         oilMolecule.firstMaterial!.diffuse.contents = UIColor.brownColor()
