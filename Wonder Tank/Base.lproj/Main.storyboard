@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -408,22 +408,55 @@
                                     <action selector="showAmmonia:" destination="ugO-8p-qXm" eventType="touchDown" id="xH3-Nw-cGT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-UG-zdN">
+                                <rect key="frame" x="522" y="202" width="52" height="30"/>
+                                <state key="normal" title="Ethanol">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSoap:" destination="ugO-8p-qXm" eventType="touchDown" id="uAq-IE-8Rp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVK-7Y-pfG">
+                                <rect key="frame" x="534" y="240" width="40" height="30"/>
+                                <state key="normal" title="Water">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSoap:" destination="ugO-8p-qXm" eventType="touchDown" id="RMm-yi-INq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLF-El-jOr">
+                                <rect key="frame" x="514" y="278" width="60" height="30"/>
+                                <state key="normal" title="Methane">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSoap:" destination="ugO-8p-qXm" eventType="touchDown" id="oB7-2z-Ucc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hYH-zX-0A3" firstAttribute="top" secondItem="rmy-Ed-j58" secondAttribute="bottom" constant="8" symbolic="YES" id="594-HM-H0I"/>
                             <constraint firstItem="rmy-Ed-j58" firstAttribute="trailing" secondItem="hVA-HP-Qrc" secondAttribute="trailing" id="9Ll-wr-mdv"/>
+                            <constraint firstItem="jsI-UG-zdN" firstAttribute="trailing" secondItem="iGj-wT-fpT" secondAttribute="trailing" id="BMa-8a-MUL"/>
                             <constraint firstItem="I01-a7-kGE" firstAttribute="top" secondItem="hYH-zX-0A3" secondAttribute="bottom" constant="8" symbolic="YES" id="Fwu-Mj-2Lp"/>
+                            <constraint firstItem="jsI-UG-zdN" firstAttribute="top" secondItem="iGj-wT-fpT" secondAttribute="bottom" constant="8" symbolic="YES" id="GkT-Ix-hMx"/>
                             <constraint firstItem="iGj-wT-fpT" firstAttribute="trailing" secondItem="I01-a7-kGE" secondAttribute="trailing" id="LbH-EM-els"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="ueD-G8-g1G" secondAttribute="leadingMargin" id="Lcv-NR-1Uc"/>
+                            <constraint firstItem="eLF-El-jOr" firstAttribute="top" secondItem="QVK-7Y-pfG" secondAttribute="bottom" constant="8" symbolic="YES" id="N8t-24-xJh"/>
                             <constraint firstItem="hYH-zX-0A3" firstAttribute="trailing" secondItem="rmy-Ed-j58" secondAttribute="trailing" id="OwN-yo-BVf"/>
                             <constraint firstItem="iGj-wT-fpT" firstAttribute="top" secondItem="I01-a7-kGE" secondAttribute="bottom" constant="8" symbolic="YES" id="SvI-fS-NJ3"/>
                             <constraint firstItem="rmy-Ed-j58" firstAttribute="top" secondItem="hVA-HP-Qrc" secondAttribute="bottom" constant="2" id="TS3-fi-vBc"/>
+                            <constraint firstItem="QVK-7Y-pfG" firstAttribute="trailing" secondItem="jsI-UG-zdN" secondAttribute="trailing" id="WG6-sw-JzG"/>
+                            <constraint firstItem="QVK-7Y-pfG" firstAttribute="top" secondItem="jsI-UG-zdN" secondAttribute="bottom" constant="8" symbolic="YES" id="aA8-jv-UB2"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="leading" secondItem="wH4-1t-QGa" secondAttribute="leading" id="ar8-R5-UsL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hVA-HP-Qrc" secondAttribute="trailing" constant="10" id="fhE-in-l5y"/>
                             <constraint firstItem="heE-CX-oWR" firstAttribute="top" secondItem="ueD-G8-g1G" secondAttribute="topMargin" constant="18" id="g5T-YQ-Mcr"/>
                             <constraint firstItem="hYH-zX-0A3" firstAttribute="trailing" secondItem="I01-a7-kGE" secondAttribute="trailing" id="jpN-H3-QgI"/>
                             <constraint firstItem="wmb-v9-ByK" firstAttribute="top" secondItem="wH4-1t-QGa" secondAttribute="bottom" constant="8" symbolic="YES" id="pvq-yl-daO"/>
+                            <constraint firstItem="eLF-El-jOr" firstAttribute="trailing" secondItem="QVK-7Y-pfG" secondAttribute="trailing" id="rpX-lC-wIB"/>
                             <constraint firstItem="hVA-HP-Qrc" firstAttribute="baseline" secondItem="heE-CX-oWR" secondAttribute="baseline" id="tiD-LP-qXS"/>
                         </constraints>
                     </view>
@@ -475,14 +508,9 @@
                                     <action selector="enableFish:" destination="xB4-Py-fOy" eventType="touchDown" id="NXA-BN-3rp"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fsb-gH-W2H">
-                                <rect key="frame" x="475" y="9" width="118" height="31"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.119483883" green="0.56292582349999998" blue="0.67516559099999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fsb-gH-W2H" firstAttribute="top" secondItem="Map-uT-iXi" secondAttribute="topMargin" constant="9" id="SlJ-br-drh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fsb-gH-W2H" secondAttribute="trailing" constant="-7" id="cLr-LY-HJJ"/>
                             <constraint firstItem="spW-OE-sAo" firstAttribute="top" secondItem="CwF-Rg-bqG" secondAttribute="bottom" constant="8" symbolic="YES" id="eUI-mD-w9C"/>
                         </constraints>
                     </view>
