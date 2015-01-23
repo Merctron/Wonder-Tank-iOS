@@ -185,7 +185,7 @@
                                     <constraint firstAttribute="height" constant="200" id="3v3-i8-aiG"/>
                                     <constraint firstAttribute="width" constant="400" id="Hug-TX-KC3"/>
                                 </constraints>
-                                <string key="text">Wonder Tank was created by Murtuza Kainan and Zach Perry for the educational purpose of illustrating how various scientific processes occur, through variable manipulation.</string>
+                                <string key="text">Atomic was created by Murtuza Kainan and Zach Perry for the educational purpose of depicting molecular interaction. This makes it easier for students to see wht is happening during a reaction, and help students visualize the interactions.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -205,18 +205,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2244427957" green="0.38572083280000002" blue="0.56022843069999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="rkz-gc-ggV" secondAttribute="centerX" id="B9i-wh-9LY"/>
+                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="centerX" secondItem="Lmo-QQ-jse" secondAttribute="centerX" id="D78-eC-EDW"/>
                             <constraint firstItem="Lmo-QQ-jse" firstAttribute="baseline" secondItem="G4Y-l9-RUs" secondAttribute="firstBaseline" id="J2x-bk-TxK"/>
+                            <constraint firstAttribute="centerY" secondItem="rkz-gc-ggV" secondAttribute="centerY" id="NnD-SN-A9K"/>
                             <constraint firstAttribute="bottom" secondItem="Lmo-QQ-jse" secondAttribute="bottom" constant="20" symbolic="YES" id="R1R-HS-GaV"/>
-                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SeN-BS-O5F" secondAttribute="bottom" priority="999" constant="8" symbolic="YES" id="Uvr-06-1qR"/>
-                            <constraint firstItem="rkz-gc-ggV" firstAttribute="top" secondItem="Wxj-nN-skZ" secondAttribute="bottom" constant="8" symbolic="YES" id="W0m-VA-dag"/>
+                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="top" secondItem="SeN-BS-O5F" secondAttribute="bottom" constant="8" symbolic="YES" id="cjW-GP-hyE"/>
                             <constraint firstItem="Cyk-l2-6BH" firstAttribute="top" secondItem="Lmo-QQ-jse" secondAttribute="bottom" constant="20" id="coa-X2-jTU"/>
                             <constraint firstItem="G4Y-l9-RUs" firstAttribute="leading" secondItem="P4Z-e8-smu" secondAttribute="leadingMargin" id="eKs-Cz-QGH"/>
                             <constraint firstAttribute="centerX" secondItem="Lmo-QQ-jse" secondAttribute="centerX" id="gO3-VN-uSI"/>
                             <constraint firstAttribute="centerX" secondItem="rkz-gc-ggV" secondAttribute="centerX" id="ofg-Xz-fGm"/>
-                            <constraint firstItem="Wxj-nN-skZ" firstAttribute="top" secondItem="SeN-BS-O5F" secondAttribute="bottom" constant="8" id="uqk-YR-MFl"/>
                             <constraint firstItem="Lmo-QQ-jse" firstAttribute="baseline" secondItem="G4Y-l9-RUs" secondAttribute="baseline" id="w7w-gq-Hx3"/>
                             <constraint firstItem="Cyk-l2-6BH" firstAttribute="top" secondItem="G4Y-l9-RUs" secondAttribute="bottom" constant="17" id="yij-QB-ktC"/>
-                            <constraint firstAttribute="centerX" secondItem="Wxj-nN-skZ" secondAttribute="centerX" id="zeK-e5-QBr"/>
                         </constraints>
                     </view>
                 </viewController>
