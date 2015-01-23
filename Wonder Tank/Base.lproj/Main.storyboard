@@ -32,9 +32,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="70Z-g9-NwP" kind="show" id="8oh-7o-7cU"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk9-6S-jDH">
                                 <rect key="frame" x="261" y="324" width="79" height="48"/>
@@ -56,6 +53,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="Rtm-WB-OZ1" kind="show" id="1hT-LC-Txu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLG-sB-WmB">
+                                <rect key="frame" x="206" y="234" width="190" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Molecular Motion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ugO-8p-qXm" kind="show" id="lcf-eV-JNW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -270,9 +278,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ugO-8p-qXm" kind="show" id="c45-5D-jjS"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRR-Eb-fgj">
                                 <rect key="frame" x="16" y="556" width="45" height="36"/>
@@ -281,9 +286,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="fRc-T3-YSZ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI3-Hi-gwY">
                                 <rect key="frame" x="227" y="379" width="146" height="42"/>
@@ -319,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP5-3n-zku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="134"/>
+            <point key="canvasLocation" x="868" y="782"/>
         </scene>
         <!--Soap Molecule Controller-->
         <scene sceneID="mcx-3G-hHG">
@@ -345,7 +347,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="70Z-g9-NwP" kind="show" id="NnW-4L-bza"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LSb-xR-iCN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heE-CX-oWR">
@@ -457,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJW-h8-XBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="134"/>
+            <point key="canvasLocation" x="1579" y="134"/>
         </scene>
         <!--Fish Tank Controller-->
         <scene sceneID="T5s-ip-j23">
@@ -548,8 +550,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fge-Ig-UNm"/>
-        <segue reference="8oh-7o-7cU"/>
+        <segue reference="LSb-xR-iCN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
