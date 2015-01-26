@@ -22,6 +22,7 @@
 		3816B1EE1A6AB76100690D92 /* fishfood.png in Resources */ = {isa = PBXBuildFile; fileRef = 3816B1ED1A6AB76100690D92 /* fishfood.png */; };
 		3816B1F01A6AB76F00690D92 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 3816B1EF1A6AB76F00690D92 /* fish.png */; };
 		38351FE01A6B623F009F25E8 /* stars_texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38351FDF1A6B623F009F25E8 /* stars_texture.jpg */; };
+		388B27031A76E4C80000E5AB /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 388B27021A76E4C80000E5AB /* AppIcon.png */; };
 		389B81451A6B05220053C817 /* fish4expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 389B81411A6B05220053C817 /* fish4expand.png */; };
 		389B81461A6B05220053C817 /* fish2.png in Resources */ = {isa = PBXBuildFile; fileRef = 389B81421A6B05220053C817 /* fish2.png */; };
 		389B81471A6B05220053C817 /* fish4compress.png in Resources */ = {isa = PBXBuildFile; fileRef = 389B81431A6B05220053C817 /* fish4compress.png */; };
@@ -58,6 +59,7 @@
 		3816B1ED1A6AB76100690D92 /* fishfood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fishfood.png; sourceTree = "<group>"; };
 		3816B1EF1A6AB76F00690D92 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
 		38351FDF1A6B623F009F25E8 /* stars_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars_texture.jpg; sourceTree = "<group>"; };
+		388B27021A76E4C80000E5AB /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		389B81411A6B05220053C817 /* fish4expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish4expand.png; sourceTree = "<group>"; };
 		389B81421A6B05220053C817 /* fish2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish2.png; sourceTree = "<group>"; };
 		389B81431A6B05220053C817 /* fish4compress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish4compress.png; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		3813E0941A6A3F22007DA5B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				388B27021A76E4C80000E5AB /* AppIcon.png */,
 				38351FDF1A6B623F009F25E8 /* stars_texture.jpg */,
 				389B81411A6B05220053C817 /* fish4expand.png */,
 				389B81421A6B05220053C817 /* fish2.png */,
@@ -242,6 +245,7 @@
 				38351FE01A6B623F009F25E8 /* stars_texture.jpg in Resources */,
 				389B81471A6B05220053C817 /* fish4compress.png in Resources */,
 				3813E09E1A6A3F22007DA5B5 /* Images.xcassets in Resources */,
+				388B27031A76E4C80000E5AB /* AppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
