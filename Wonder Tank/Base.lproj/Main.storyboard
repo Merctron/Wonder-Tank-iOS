@@ -179,8 +179,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="y7v-hW-JqY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-gc-ggV">
-                                <rect key="frame" x="101" y="78" width="400" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-gc-ggV">
+                                <rect key="frame" x="100" y="200" width="400" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="3v3-i8-aiG"/>
                                     <constraint firstAttribute="width" constant="400" id="Hug-TX-KC3"/>
